@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>NEXUS ALGO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- Shared top bar -->
+    <header class="topbar" id="topbar" hidden>
+      <div class="topbar__brand">
+        <div class="logo">◆</div>
+        <div class="topbar__title">
+          <span class="topbar__name">NEXUS ALGO</span>
+          <span class="topbar__sub" id="topbarSub">—</span>
+        </div>
+      </div>
+      <button class="topbar__menu" id="menuBtn" aria-label="Menu">☰</button>
+    </header>
+
+    <main class="view-stack" id="viewStack"></main>
+
+    <nav class="tabbar" id="tabbar" hidden>
+      <button class="tab" data-route="dashboard">
+        <span class="tab__icon">◈</span><span class="tab__label">Dashboard</span>
+      </button>
+      <button class="tab" data-route="market">
+        <span class="tab__icon">◐</span><span class="tab__label">Market</span>
+      </button>
+      <button class="tab" data-route="account">
+        <span class="tab__icon">▣</span><span class="tab__label">Account</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="state.js"></script>
+  <script src="router.js"></script>
+  <script src="screens/login.js"></script>
+  <script src="screens/broker.js"></script>
+  <script src="screens/dashboard.js"></script>
+  <script src="screens/market.js"></script>
+  <script src="screens/account.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
